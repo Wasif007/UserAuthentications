@@ -60,6 +60,11 @@ db.user.all().then(function(values){
 res.send(values);
 });
 });
+
+//about route
+app.get("/about",function(req,res){
+res.send("made on request of Naeem Siddiq");
+});
 db.sequelize.sync({force:true}).then(function()
 {
 app.listen(PORT,function(){
