@@ -55,6 +55,9 @@ var body=_.pick(req.body,'email','password');
 	})
 });
 
+app.get("/users/all",function(req,res){
+
+});
 db.sequelize.sync({force:true}).then(function()
 {
 app.listen(PORT,function(){
