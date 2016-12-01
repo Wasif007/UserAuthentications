@@ -18,5 +18,5 @@ sequelize=new Sequelize(undefined,undefined,undefined,{
 var db={};
 db.user=sequelize.import(__dirname+"/models/users.js");
 db.sequelize=sequelize;
-db.Squeleizer=Squeleizer;
+db.Sequelize=Sequelize;
 module.exports=db;
