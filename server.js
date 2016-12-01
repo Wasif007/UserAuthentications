@@ -54,9 +54,11 @@ var body=_.pick(req.body,'email','password');
 		res.status(500).send();
 	})
 });
-
+//Get all users
 app.get("/users/all",function(req,res){
-
+db.user.all().then(function(values){
+res.send(values);
+});
 });
 db.sequelize.sync({force:true}).then(function()
 {
